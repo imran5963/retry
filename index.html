@@ -30,7 +30,7 @@
             let sw = await navigator.serviceWorker.ready;
             let push = await sw.pushManager.subscribe({
                 userVisibleOnly: true,
-                applicationServerKey: convertedKey
+                applicationServerKey: vapidPublicKey
             });
             console.log('Push Subscription:', JSON.stringify(push));
         } catch (error) {
